@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  hackaton.webapi:
+    image: ${DOCKER_REGISTRY-}hackatonwebapi
+    build:
+      context: .
+      dockerfile: Hackaton.WebApi/Dockerfile
