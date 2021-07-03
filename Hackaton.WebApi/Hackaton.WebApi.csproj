@@ -22,8 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Hackaton.DataAccess\Hackaton.DataAccess.csproj" />
-    <ProjectReference Include="..\..\Hackaton.DataSeed\Hackaton.DataSeed.csproj" />
+    <ProjectReference Include="..\Hackaton.DataAccess\Hackaton.DataAccess.csproj" />
+    <ProjectReference Include="..\Hackaton.DataSeed\Hackaton.DataSeed.csproj" />
   </ItemGroup>
 
 </Project>
