@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Driver;
 
 namespace Hackaton.WebApi.Controllers
 {
     [Route("users")]
     public class UserController : ControllerBase
     {
+        private readonly IMongoDatabase db;
+
+        public UserController(IMongoDatabase db)
+        {
+            this.db = db;
+        }
+
         [HttpGet("{userId}/videos")]
         public IActionResult Videos(int userId, string priority = "desc")
         {

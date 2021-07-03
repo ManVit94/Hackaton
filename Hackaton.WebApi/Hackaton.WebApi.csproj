@@ -8,7 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Data.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Data.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Hackaton.DataAccess\Hackaton.DataAccess.csproj" />
+    <ProjectReference Include="..\..\Hackaton.DataSeed\Hackaton.DataSeed.csproj" />
   </ItemGroup>
 
 </Project>

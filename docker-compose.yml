@@ -2,7 +2,17 @@ version: '3.4'
 
 services:
   hackaton.webapi:
+    container_name: hackaton.webapi
     image: ${DOCKER_REGISTRY-}hackatonwebapi
     build:
       context: .
       dockerfile: Hackaton.WebApi/Dockerfile
+    ports:
+    - "52944:443"
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"

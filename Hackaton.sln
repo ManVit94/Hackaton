@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.WebApi", "Hackaton.WebApi\Hackaton.WebApi.csproj", "{E7A584B4-2679-48BB-A5AD-FDDFA0379EE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hackaton.WebApi", "Hackaton.WebApi\Hackaton.WebApi.csproj", "{E7A584B4-2679-48BB-A5AD-FDDFA0379EE5}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{EA1F3F99-8346-4FE4-8CE4-CCB5F5476AA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.DataAccess", "..\Hackaton.DataAccess\Hackaton.DataAccess.csproj", "{DBAAB5AC-CAC8-4C81-9054-17401934D641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.DataSeed", "..\Hackaton.DataSeed\Hackaton.DataSeed.csproj", "{D4740A13-FA9E-414A-87F4-30AFD4F8DB26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{EA1F3F99-8346-4FE4-8CE4-CCB5F5476AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA1F3F99-8346-4FE4-8CE4-CCB5F5476AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA1F3F99-8346-4FE4-8CE4-CCB5F5476AA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBAAB5AC-CAC8-4C81-9054-17401934D641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBAAB5AC-CAC8-4C81-9054-17401934D641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBAAB5AC-CAC8-4C81-9054-17401934D641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBAAB5AC-CAC8-4C81-9054-17401934D641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4740A13-FA9E-414A-87F4-30AFD4F8DB26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4740A13-FA9E-414A-87F4-30AFD4F8DB26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4740A13-FA9E-414A-87F4-30AFD4F8DB26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4740A13-FA9E-414A-87F4-30AFD4F8DB26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
