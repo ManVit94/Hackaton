@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Hackaton.DataAccess;
+﻿using Hackaton.DataAccess;
 
 namespace Hackaton.DataSeed.Dto
 {
-    public class UserFlow
+    class UserFlow
     {
         public int UserId { get; set; }
         public int FlowId { get; set; }

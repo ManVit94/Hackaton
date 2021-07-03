@@ -1,28 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+
+using Newtonsoft.Json;
+
 using Hackaton.DataAccess.Entities;
 using Hackaton.DataAccess.Interfaces;
 using Hackaton.DataSeed.Dto;
-using MongoDB.Driver;
-using Newtonsoft.Json;
+using Microsoft.Extensions.Configuration;
 
 namespace Hackaton.DataSeed
 {
     public class DataSeedingService : IDataSeedingService
     {
         private readonly IUserRepository _userRepository;
-
+        private readonly IConfiguration _configuration;
         private IDictionary<int, Video> _videos;
 
         private SeedingObj _seedingObj;
 
-        public DataSeedingService(IUserRepository userRepository)
+        public DataSeedingService(IUserRepository userRepository, IConfiguration configuration)
         {
             _userRepository = userRepository;
+            _configuration = configuration;
         }
 
         public async Task SeedInitialData()
@@ -30,7 +31,7 @@ namespace Hackaton.DataSeed
             if (!await _userRepository.IsCollectionEmpty())
                 return;
 
-            var data = await File.ReadAllTextAsync("Data.json");
+            var data = await File.ReadAllTextAsync(_configuration["DataFileName"]);
 
             var users = ParseUssers(data);
 

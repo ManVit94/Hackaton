@@ -1,18 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Hackaton.DataAccess.Entities;
-using Hackaton.DataAccess.Interfaces;
-using Hackaton.DataAccess.Repositories;
-using Hackaton.DataSeed;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MongoDB.Driver;
+
+using Hackaton.Business.Interfaces;
+using Hackaton.Business.Services;
+using Hackaton.DataAccess.Entities;
+using Hackaton.DataAccess.Interfaces;
+using Hackaton.DataAccess.Repositories;
+using Hackaton.DataSeed;
 
 namespace Hackaton.WebApi
 {
@@ -32,6 +30,7 @@ namespace Hackaton.WebApi
             RegisterDataSeeding(services);
 
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
 
             services.AddControllers();
         }
@@ -84,7 +83,7 @@ namespace Hackaton.WebApi
                 var collection = db.GetCollection<UserEntity>("Users");
 
                 var repo = new UserRepository(collection);
-                return new DataSeedingService(repo);
+                return new DataSeedingService(repo, _configuration);
             });
         }
     }

@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Hackaton.DataSeed.Dto
 {
-    public class SeedingObj
+    class SeedingObj
     {
         public ICollection<User> Users { get; set; }
         public ICollection<Video> Videos { get; set; }

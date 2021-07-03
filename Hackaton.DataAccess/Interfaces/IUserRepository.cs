@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+
 using Hackaton.DataAccess.Entities;
 
 namespace Hackaton.DataAccess.Interfaces
@@ -10,5 +9,6 @@ namespace Hackaton.DataAccess.Interfaces
     {
         Task<bool> IsCollectionEmpty();
         Task AddManyAsync(IEnumerable<UserEntity> users);
+        Task<UserEntity> GetUser(int id);
     }
 }

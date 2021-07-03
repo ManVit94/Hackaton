@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MongoDB.Bson.Serialization.Attributes;
-
-namespace Hackaton.DataAccess.Entities
+﻿namespace Hackaton.DataAccess.Entities
 {
     public class VideoEntity
     {

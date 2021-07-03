@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace Hackaton.DataAccess.Entities

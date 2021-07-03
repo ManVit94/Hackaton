@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+
+using MongoDB.Driver;
+
 using Hackaton.DataAccess.Entities;
 using Hackaton.DataAccess.Interfaces;
-using MongoDB.Driver;
 
 namespace Hackaton.DataAccess.Repositories
 {
@@ -20,6 +20,11 @@ namespace Hackaton.DataAccess.Repositories
         public Task AddManyAsync(IEnumerable<UserEntity> users)
         {
             return _users.InsertManyAsync(users);
+        }
+
+        public Task<UserEntity> GetUser(int id)
+        {
+            return _users.Find(u => u.Id == id).FirstOrDefaultAsync();
         }
 
         public async Task<bool> IsCollectionEmpty()
