@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hackaton.DataAccess", "Hack
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hackaton.DataSeed", "Hackaton.DataSeed\Hackaton.DataSeed.csproj", "{85FA1D47-CCBF-43DC-8E95-63B8E626768B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Business", "Hackaton.Business\Hackaton.Business.csproj", "{4ACFA806-F4BE-4C03-9CDD-9AC955B8D5D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hackaton.Business", "Hackaton.Business\Hackaton.Business.csproj", "{4ACFA806-F4BE-4C03-9CDD-9AC955B8D5D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.DataContracts", "Hackaton.DataContracts\Hackaton.DataContracts.csproj", "{67466BB4-A40E-4380-8CE2-E49C2C35000A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{4ACFA806-F4BE-4C03-9CDD-9AC955B8D5D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ACFA806-F4BE-4C03-9CDD-9AC955B8D5D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ACFA806-F4BE-4C03-9CDD-9AC955B8D5D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67466BB4-A40E-4380-8CE2-E49C2C35000A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67466BB4-A40E-4380-8CE2-E49C2C35000A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67466BB4-A40E-4380-8CE2-E49C2C35000A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67466BB4-A40E-4380-8CE2-E49C2C35000A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

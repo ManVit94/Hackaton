@@ -19,10 +19,14 @@ _Example_
 ```bash
 # Go into the folder with solution and run:
 $ docker-compose up
+```
 
 You can reach api using 52944 port.
 Url example: https://localhost:52944/users/5/videos/7?priority=asc
-```
+
+RabbitMqPort: 15672
+Username:guest
+Password:guest
 
 ## Test
 
@@ -30,4 +34,4 @@ Unfortunately not enough time for test.
 
 ## Notes
 
-<Put here your notes if you have some>
+P.S. I know that RabbitMq could be configured in more advanced way and it is better to send message in separate middleware or action filter, but not enough time for it and I'm exhausted)

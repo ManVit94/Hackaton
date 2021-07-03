@@ -11,6 +11,8 @@ using Hackaton.DataAccess.Entities;
 using Hackaton.DataAccess.Interfaces;
 using Hackaton.DataAccess.Repositories;
 using Hackaton.DataSeed;
+using RabbitMQ.Client;
+using Hackaton.DataContracts;
 
 namespace Hackaton.WebApi
 {
@@ -31,6 +33,21 @@ namespace Hackaton.WebApi
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
+
+            services.AddScoped<IEventPublisher, EventPublisher>();
+            services.AddScoped<IConnectionFactory>(sp =>
+            {
+                ConnectionFactory factory = new ConnectionFactory
+                {
+                    UserName = "guest",
+                    Password = "guest",
+                    VirtualHost = "/",
+                    HostName = "rabbitmq",
+                    Port = 5672
+                };
+
+                return factory;
+            });
 
             services.AddControllers();
         }
